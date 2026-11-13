@@ -1,20 +1,21 @@
 {
-  "lastUpdated": "2026-06-06T12:00:00Z",
+  "lastUpdated": "2026-11-13T00:45:53.548Z",
   "puzzles": [
     {
       "id": "1",
       "title": "Mordoku #1",
-      "status": "completed",
-      "date": "2026-06-01",
-      "solvedAt": "2026-06-01T18:30:00",
-      "notes": "Erster Versuch lief super."
+      "status": "open",
+      "date": "2026-11-13",
+      "solvedAt": "2026-11-13T18:30:00",
+      "notes": ""
     },
     {
       "id": "2",
       "title": "Mordoku #2",
-      "status": "in-progress",
-      "date": "",
-      "notes": "Hänge bei Sektor 3 fest."
+      "status": "open",
+      "date": "2026-11-13",
+      "notes": "",
+      "solvedAt": "2026-11-13T00:45:04.865Z"
     },
     {
       "id": "3",
