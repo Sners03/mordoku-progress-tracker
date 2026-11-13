@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Outfit", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", "Palatino Linotype", Palatino, serif;
+  --color-ink: #1a1214;
+  --color-blood: #9b1d32;
+  --color-rose: #9b1d32;
+  --color-sage: #1f7a4d;
+  --color-clue: #e6c229;
+  --color-paper: #f7f1ea;
+  --color-night: #100d0e;
+  --color-card: #fffaf3;
+  --color-dusk: #22181b;
+  --color-line: #d9c7ae;
+  --color-mist: #6a564c;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    background: #e7d0cd;
+    color: var(--color-ink);
+  }
+
+  html.dark body {
+    background: #0c0a0b;
+    color: #f4ead8;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+}
+
+.dossier {
+  background-color: #e7d0cd;
+  background-image:
+    radial-gradient(ellipse 70% 36% at 0% 0%, rgba(155, 29, 50, 0.2), transparent 48%),
+    radial-gradient(ellipse 55% 30% at 100% 12%, rgba(31, 122, 77, 0.12), transparent 46%),
+    linear-gradient(180deg, #f0ddd9 0%, #d7b3af 100%);
+  background-attachment: fixed;
+}
+
+.glass {
+  background: color-mix(in srgb, #fffaf3 46%, transparent);
+  -webkit-backdrop-filter: blur(6px) saturate(1.35);
+  backdrop-filter: blur(6px) saturate(1.35);
+  box-shadow:
+    0 18px 40px -22px rgba(26, 18, 20, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+html.dark .glass {
+  background: color-mix(in srgb, #1c1618 40%, transparent);
+  box-shadow:
+    0 18px 40px -18px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.glass-open {
+  background: color-mix(in srgb, #fffaf3 18%, transparent);
+  -webkit-backdrop-filter: blur(2px) saturate(1.15);
+  backdrop-filter: blur(2px) saturate(1.15);
+}
+
+html.dark .glass-open {
+  background: color-mix(in srgb, #1c1618 16%, transparent);
+  -webkit-backdrop-filter: blur(2px) saturate(1.1);
+  backdrop-filter: blur(2px) saturate(1.1);
+}
+
+.glass-clue {
+  background: color-mix(in srgb, #e6c229 30%, transparent);
+  -webkit-backdrop-filter: blur(2px) saturate(1.15);
+  backdrop-filter: blur(2px) saturate(1.15);
+  color: #1a1214;
+}
+
+html.dark .glass-clue {
+  background: color-mix(in srgb, #e6c229 32%, transparent);
+  -webkit-backdrop-filter: blur(2px) saturate(1.1);
+  backdrop-filter: blur(2px) saturate(1.1);
+  color: #fffaf3;
+  text-shadow:
+    0 1px 1px #100d0e,
+    0 0 8px #100d0e;
+}
+
+.glass-sage {
+  background: color-mix(in srgb, #1f7a4d 40%, transparent);
+  -webkit-backdrop-filter: blur(22px) saturate(1.7);
+  backdrop-filter: blur(22px) saturate(1.7);
+}
+
+html.dark .glass-sage {
+  background: color-mix(in srgb, #1f7a4d 46%, transparent);
+}
+
+.motif {
+  --motif-edge: #fffaf3;
+  color: #1a1214;
+}
+
+.motif-blood {
+  color: #9b1d32;
+}
+
+html.dark .motif {
+  --motif-edge: #1a1214;
+  color: #f7f1ea;
+}
+
+html.dark .motif-blood {
+  --motif-edge: #f4ead8;
+  color: #9b1d32;
+}
+
+html.dark .dossier {
+  background-color: #0c0a0b;
+  background-image:
+    radial-gradient(ellipse 80% 34% at 50% -8%, rgba(155, 29, 50, 0.42), transparent 48%),
+    linear-gradient(180deg, #1a0e11 0%, #0c0a0b 58%);
+  background-attachment: fixed;
+}

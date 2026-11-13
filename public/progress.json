@@ -1,0 +1,566 @@
+{
+  "lastUpdated": "2026-06-06T12:00:00Z",
+  "puzzles": [
+    {
+      "id": "1",
+      "title": "Mordoku #1",
+      "status": "completed",
+      "date": "2026-06-01",
+      "solvedAt": "2026-06-01T18:30:00",
+      "notes": "Erster Versuch lief super."
+    },
+    {
+      "id": "2",
+      "title": "Mordoku #2",
+      "status": "in-progress",
+      "date": "",
+      "notes": "Hänge bei Sektor 3 fest."
+    },
+    {
+      "id": "3",
+      "title": "Mordoku #3",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "4",
+      "title": "Mordoku #4",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "5",
+      "title": "Mordoku #5",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "6",
+      "title": "Mordoku #6",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "7",
+      "title": "Mordoku #7",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "8",
+      "title": "Mordoku #8",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "9",
+      "title": "Mordoku #9",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "10",
+      "title": "Mordoku #10",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "11",
+      "title": "Mordoku #11",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "12",
+      "title": "Mordoku #12",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "13",
+      "title": "Mordoku #13",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "14",
+      "title": "Mordoku #14",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "15",
+      "title": "Mordoku #15",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "16",
+      "title": "Mordoku #16",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "17",
+      "title": "Mordoku #17",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "18",
+      "title": "Mordoku #18",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "19",
+      "title": "Mordoku #19",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "20",
+      "title": "Mordoku #20",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "21",
+      "title": "Mordoku #21",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "22",
+      "title": "Mordoku #22",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "23",
+      "title": "Mordoku #23",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "24",
+      "title": "Mordoku #24",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "25",
+      "title": "Mordoku #25",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "26",
+      "title": "Mordoku #26",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "27",
+      "title": "Mordoku #27",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "28",
+      "title": "Mordoku #28",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "29",
+      "title": "Mordoku #29",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "30",
+      "title": "Mordoku #30",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "31",
+      "title": "Mordoku #31",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "32",
+      "title": "Mordoku #32",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "33",
+      "title": "Mordoku #33",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "34",
+      "title": "Mordoku #34",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "35",
+      "title": "Mordoku #35",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "36",
+      "title": "Mordoku #36",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "37",
+      "title": "Mordoku #37",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "38",
+      "title": "Mordoku #38",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "39",
+      "title": "Mordoku #39",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "40",
+      "title": "Mordoku #40",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "41",
+      "title": "Mordoku #41",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "42",
+      "title": "Mordoku #42",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "43",
+      "title": "Mordoku #43",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "44",
+      "title": "Mordoku #44",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "45",
+      "title": "Mordoku #45",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "46",
+      "title": "Mordoku #46",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "47",
+      "title": "Mordoku #47",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "48",
+      "title": "Mordoku #48",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "49",
+      "title": "Mordoku #49",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "50",
+      "title": "Mordoku #50",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "51",
+      "title": "Mordoku #51",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "52",
+      "title": "Mordoku #52",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "53",
+      "title": "Mordoku #53",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "54",
+      "title": "Mordoku #54",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "55",
+      "title": "Mordoku #55",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "56",
+      "title": "Mordoku #56",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "57",
+      "title": "Mordoku #57",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "58",
+      "title": "Mordoku #58",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "59",
+      "title": "Mordoku #59",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "60",
+      "title": "Mordoku #60",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "61",
+      "title": "Mordoku #61",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "62",
+      "title": "Mordoku #62",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "63",
+      "title": "Mordoku #63",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "64",
+      "title": "Mordoku #64",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "65",
+      "title": "Mordoku #65",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "66",
+      "title": "Mordoku #66",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "67",
+      "title": "Mordoku #67",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "68",
+      "title": "Mordoku #68",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "69",
+      "title": "Mordoku #69",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "70",
+      "title": "Mordoku #70",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "71",
+      "title": "Mordoku #71",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "72",
+      "title": "Mordoku #72",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "73",
+      "title": "Mordoku #73",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "74",
+      "title": "Mordoku #74",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "75",
+      "title": "Mordoku #75",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "76",
+      "title": "Mordoku #76",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "77",
+      "title": "Mordoku #77",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "78",
+      "title": "Mordoku #78",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "79",
+      "title": "Mordoku #79",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    },
+    {
+      "id": "80",
+      "title": "Mordoku #80",
+      "status": "open",
+      "date": "",
+      "notes": ""
+    }
+  ]
+}
