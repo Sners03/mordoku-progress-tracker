@@ -6,6 +6,7 @@ export interface Puzzle {
   status: PuzzleStatus
   date: string
   notes: string
+  solvedAt?: string
 }
 
 export interface ProgressFile {

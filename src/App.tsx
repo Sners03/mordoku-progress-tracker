@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { LogOut, Moon, Plus, RefreshCw, Save, Sun } from 'lucide-react'
 import AdminModal from './components/AdminModal.tsx'
+import BackgroundMotifs from './components/BackgroundMotifs.tsx'
 import ProgressBar from './components/ProgressBar.tsx'
 import PuzzleCard from './components/PuzzleCard.tsx'
 import PuzzleSheet from './components/PuzzleSheet.tsx'
@@ -181,8 +182,9 @@ export default function App() {
   const closeSheet = useCallback(() => setSelectedId(null), [])
 
   return (
-    <div className="dossier min-h-svh">
-      <div className={`mx-auto flex min-h-svh w-full max-w-5xl flex-col px-3 py-4 sm:px-6 sm:py-8 ${editing ? 'pb-28' : ''}`}>
+    <div className="dossier relative isolate min-h-svh">
+      <BackgroundMotifs />
+      <div className={`relative z-10 mx-auto flex min-h-svh w-full max-w-5xl flex-col px-3 py-4 sm:px-6 sm:py-8 ${editing ? 'pb-28' : ''}`}>
         <header className="flex items-start justify-between gap-3">
           <div>
             <h1 className="font-display text-4xl leading-none text-ink sm:text-5xl dark:text-paper">Mordoku</h1>
@@ -191,7 +193,7 @@ export default function App() {
             <button
               type="button"
               onClick={toggleTheme}
-              className="inline-flex size-10 items-center justify-center rounded-full border-2 border-white/80 bg-white text-ink shadow-sm dark:border-[#ff7ab8]/40 dark:bg-[#3a1848] dark:text-paper"
+              className="inline-flex size-10 items-center justify-center rounded-full border-2 border-paper bg-paper text-ink shadow-sm dark:border-white/15 dark:bg-dusk/70 dark:text-paper"
               aria-label={dark ? 'Helles Design' : 'Dunkles Design'}
             >
               {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
@@ -200,7 +202,7 @@ export default function App() {
               type="button"
               onClick={() => void refresh()}
               disabled={loading || dirty}
-              className="inline-flex size-10 items-center justify-center rounded-full border-2 border-white/80 bg-white text-ink shadow-sm disabled:opacity-40 dark:border-[#ff7ab8]/40 dark:bg-[#3a1848] dark:text-paper"
+              className="inline-flex size-10 items-center justify-center rounded-full border-2 border-paper bg-paper text-ink shadow-sm disabled:opacity-40 dark:border-white/15 dark:bg-dusk/70 dark:text-paper"
               aria-label="Aktualisieren"
             >
               <RefreshCw className={`size-4 ${loading ? 'animate-spin' : ''}`} aria-hidden="true" />
@@ -213,7 +215,7 @@ export default function App() {
                   setToken(null)
                   setNotice(null)
                 }}
-                className="inline-flex size-10 items-center justify-center rounded-full border-2 border-white/80 bg-white text-ink shadow-sm dark:border-[#ff7ab8]/40 dark:bg-[#3a1848] dark:text-paper"
+                className="inline-flex size-10 items-center justify-center rounded-full border-2 border-paper bg-paper text-ink shadow-sm dark:border-white/15 dark:bg-dusk/70 dark:text-paper"
                 aria-label="Logout"
               >
                 <LogOut className="size-4" />
@@ -222,7 +224,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setLoginOpen(true)}
-                className="rounded-full px-3 py-2 text-sm font-medium text-ink underline-offset-4 hover:underline dark:text-[#ffe0ee]"
+                className="rounded-full px-3 py-2 text-sm font-medium text-ink underline-offset-4 hover:underline dark:text-paper"
               >
                 <span className="sm:hidden">Admin</span>
                 <span className="hidden sm:inline">Admin-Login</span>
@@ -235,7 +237,7 @@ export default function App() {
           <ProgressBar completed={counts.completed} active={counts.active} total={counts.total} />
         </div>
 
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-mist dark:text-paper/60">
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-mist dark:text-paper/75">
           <p>
             {progress ? `Zuletzt ${formatTimestamp(progress.lastUpdated)}` : 'Wird geladen…'}
             {editing ? ' · Bearbeiten' : ''}
@@ -278,7 +280,7 @@ export default function App() {
                 className={`shrink-0 rounded-full px-3 py-1.5 text-sm ${
                   active
                     ? 'bg-ink text-paper dark:bg-paper dark:text-ink'
-                    : 'border-2 border-white/70 bg-white/80 text-ink dark:border-[#ff7ab8]/30 dark:bg-[#3a1848] dark:text-[#ffe0ee]'
+                    : 'glass border border-white/70 text-ink dark:border-white/15 dark:text-paper'
                 }`}
               >
                 {item.label} {count}
@@ -294,7 +296,7 @@ export default function App() {
             onChange={(event) => setQuery(event.target.value)}
             inputMode="search"
             placeholder="Nummer oder Notiz, z. B. 47"
-            className="w-full rounded-2xl border-2 border-white/80 bg-white/90 px-3 py-2.5 text-base text-ink outline-none ring-rose/40 placeholder:text-mist/80 focus:ring-2 dark:border-[#ff7ab8]/40 dark:bg-[#3a1848] dark:text-paper"
+            className="glass w-full rounded-2xl border border-white/70 px-3 py-2.5 text-base text-ink outline-none ring-rose/30 placeholder:text-mist/80 focus:ring-2 dark:border-white/15 dark:text-paper"
           />
         </label>
 
@@ -302,17 +304,17 @@ export default function App() {
           <button
             type="button"
             onClick={addPuzzle}
-            className="mt-3 inline-flex items-center gap-1.5 text-sm text-rose"
+            className="mt-3 inline-flex items-center gap-1.5 text-sm text-ink dark:text-paper"
           >
             <Plus className="size-4" aria-hidden="true" />
             Weiteres Mordoku
           </button>
         )}
 
-        <main className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4">
-          {loading && !progress && <p className="col-span-full text-sm text-mist">Akte wird geladen…</p>}
+        <main className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {loading && !progress && <p className="col-span-full text-sm text-mist dark:text-paper/70">Akte wird geladen…</p>}
           {progress && visible.length === 0 && (
-            <p className="col-span-full rounded-3xl border border-dashed border-line px-4 py-8 text-center text-sm text-mist dark:border-white/15">
+            <p className="col-span-full px-4 py-8 text-center text-sm text-mist dark:text-paper/70">
               Hier ist gerade nichts. Ein anderer Filter zeigt wieder mehr.
             </p>
           )}

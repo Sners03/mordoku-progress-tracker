@@ -5,17 +5,17 @@
 @theme {
   --font-sans: "Outfit", "Segoe UI", sans-serif;
   --font-display: "Fraunces", "Palatino Linotype", Palatino, serif;
-  --color-ink: #3a1028;
-  --color-blood: #e11d63;
-  --color-rose: #e11d63;
-  --color-sage: #0e9f6e;
-  --color-gold: #e8940a;
-  --color-paper: #fff6f8;
-  --color-night: #120616;
-  --color-card: #fffdfb;
-  --color-dusk: #3a1848;
-  --color-line: #f3a3c0;
-  --color-mist: #8a3d5c;
+  --color-ink: #1a1214;
+  --color-blood: #9b1d32;
+  --color-rose: #9b1d32;
+  --color-sage: #1f7a4d;
+  --color-clue: #e6c229;
+  --color-paper: #f7f1ea;
+  --color-night: #100d0e;
+  --color-card: #fffaf3;
+  --color-dusk: #22181b;
+  --color-line: #d9c7ae;
+  --color-mist: #6a564c;
 }
 
 @layer base {
@@ -30,13 +30,13 @@
   body {
     margin: 0;
     min-height: 100svh;
-    background: #ff8fb8;
+    background: #e7d0cd;
     color: var(--color-ink);
   }
 
   html.dark body {
-    background: #120616;
-    color: #fff1f6;
+    background: #0c0a0b;
+    color: #f4ead8;
   }
 
   button,
@@ -47,22 +47,92 @@
 }
 
 .dossier {
-  background-color: #ff8fb8;
+  background-color: #e7d0cd;
   background-image:
-    radial-gradient(ellipse 70% 42% at 0% -10%, rgba(255, 90, 40, 0.7), transparent 55%),
-    radial-gradient(ellipse 55% 40% at 110% 8%, rgba(255, 196, 40, 0.75), transparent 50%),
-    radial-gradient(ellipse 80% 45% at 70% 110%, rgba(190, 60, 255, 0.45), transparent 52%),
-    linear-gradient(165deg, #ffd0a8 0%, #ff7aa2 42%, #ffb0e0 100%);
+    radial-gradient(ellipse 70% 36% at 0% 0%, rgba(155, 29, 50, 0.2), transparent 48%),
+    radial-gradient(ellipse 55% 30% at 100% 12%, rgba(31, 122, 77, 0.12), transparent 46%),
+    linear-gradient(180deg, #f0ddd9 0%, #d7b3af 100%);
   background-attachment: fixed;
 }
 
+.glass {
+  background: color-mix(in srgb, #fffaf3 46%, transparent);
+  -webkit-backdrop-filter: blur(6px) saturate(1.35);
+  backdrop-filter: blur(6px) saturate(1.35);
+  box-shadow:
+    0 18px 40px -22px rgba(26, 18, 20, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+html.dark .glass {
+  background: color-mix(in srgb, #1c1618 40%, transparent);
+  box-shadow:
+    0 18px 40px -18px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.glass-open {
+  background: color-mix(in srgb, #fffaf3 18%, transparent);
+  -webkit-backdrop-filter: blur(2px) saturate(1.15);
+  backdrop-filter: blur(2px) saturate(1.15);
+}
+
+html.dark .glass-open {
+  background: color-mix(in srgb, #1c1618 16%, transparent);
+  -webkit-backdrop-filter: blur(2px) saturate(1.1);
+  backdrop-filter: blur(2px) saturate(1.1);
+}
+
+.glass-clue {
+  background: color-mix(in srgb, #e6c229 30%, transparent);
+  -webkit-backdrop-filter: blur(2px) saturate(1.15);
+  backdrop-filter: blur(2px) saturate(1.15);
+  color: #1a1214;
+}
+
+html.dark .glass-clue {
+  background: color-mix(in srgb, #e6c229 32%, transparent);
+  -webkit-backdrop-filter: blur(2px) saturate(1.1);
+  backdrop-filter: blur(2px) saturate(1.1);
+  color: #fffaf3;
+  text-shadow:
+    0 1px 1px #100d0e,
+    0 0 8px #100d0e;
+}
+
+.glass-sage {
+  background: color-mix(in srgb, #1f7a4d 40%, transparent);
+  -webkit-backdrop-filter: blur(22px) saturate(1.7);
+  backdrop-filter: blur(22px) saturate(1.7);
+}
+
+html.dark .glass-sage {
+  background: color-mix(in srgb, #1f7a4d 46%, transparent);
+}
+
+.motif {
+  --motif-edge: #fffaf3;
+  color: #1a1214;
+}
+
+.motif-blood {
+  color: #9b1d32;
+}
+
+html.dark .motif {
+  --motif-edge: #1a1214;
+  color: #f7f1ea;
+}
+
+html.dark .motif-blood {
+  --motif-edge: #f4ead8;
+  color: #9b1d32;
+}
+
 html.dark .dossier {
-  background-color: #120616;
+  background-color: #0c0a0b;
   background-image:
-    radial-gradient(ellipse 75% 40% at -10% 0%, rgba(255, 45, 110, 0.55), transparent 52%),
-    radial-gradient(ellipse 60% 36% at 110% 12%, rgba(255, 170, 40, 0.38), transparent 48%),
-    radial-gradient(ellipse 70% 42% at 80% 100%, rgba(20, 190, 170, 0.32), transparent 50%),
-    radial-gradient(ellipse 50% 30% at 10% 90%, rgba(150, 60, 255, 0.4), transparent 48%),
-    linear-gradient(180deg, #2a0a28 0%, #120616 48%, #10102e 100%);
+    radial-gradient(ellipse 80% 34% at 50% -8%, rgba(155, 29, 50, 0.42), transparent 48%),
+    linear-gradient(180deg, #1a0e11 0%, #0c0a0b 58%);
   background-attachment: fixed;
 }

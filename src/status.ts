@@ -20,6 +20,25 @@ export function formatDay(value: string): string {
   return new Intl.DateTimeFormat('de-DE', { dateStyle: 'medium' }).format(date)
 }
 
+export function formatCardDay(value: string): string {
+  if (!value) return ''
+  const date = new Date(value.includes('T') ? value : `${value}T00:00:00`)
+  if (Number.isNaN(date.getTime())) return value
+  return new Intl.DateTimeFormat('de-DE', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  }).format(date)
+}
+
+export function formatClock(value: string): string {
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) return ''
+  const hours = String(date.getHours()).padStart(2, '0')
+  const minutes = String(date.getMinutes()).padStart(2, '0')
+  return `${hours}:${minutes}`
+}
+
 export function formatTimestamp(value: string): string {
   const date = new Date(value)
   if (Number.isNaN(date.getTime())) return value

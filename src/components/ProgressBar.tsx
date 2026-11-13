@@ -11,20 +11,20 @@ export default function ProgressBar({ completed, active, total }: ProgressBarPro
   const percent = Math.round(completedShare)
 
   return (
-    <section className="rounded-[1.75rem] border-2 border-white/70 bg-white/85 px-4 py-4 shadow-[0_18px_40px_-24px_rgba(225,29,99,0.45)] backdrop-blur-md sm:px-5 dark:border-[#ff7ab8]/40 dark:bg-[#3a1848]/90">
+    <section className="glass rounded-[1.75rem] border border-white/70 px-4 py-4 sm:px-5 dark:border-white/15">
       <div className="flex items-end justify-between gap-3">
         <div>
           <p className="text-xs tracking-[0.16em] text-rose uppercase">Fortschritt</p>
           <p className="mt-1 font-display text-4xl leading-none text-ink dark:text-paper">
             {completed}
-            <span className="ml-2 font-sans text-base font-normal text-mist dark:text-[#ffd0e4]">von {total}</span>
+            <span className="ml-2 font-sans text-base font-normal text-mist dark:text-paper/70">von {total}</span>
           </p>
         </div>
-        <p className="pb-1 font-display text-2xl text-gold">{percent}%</p>
+        <p className="pb-1 font-display text-2xl text-sage">{percent}%</p>
       </div>
 
       <div
-        className="mt-4 h-3.5 overflow-hidden rounded-full bg-[#ffd0e0] dark:bg-white/15"
+        className="mt-4 h-3.5 overflow-hidden rounded-full bg-ink/10 dark:bg-black/40"
         role="progressbar"
         aria-valuenow={completed}
         aria-valuemin={0}
@@ -37,7 +37,7 @@ export default function ProgressBar({ completed, active, total }: ProgressBarPro
             style={{ width: completed === 0 ? '0%' : `max(${completedShare}%, 10px)` }}
           />
           <div
-            className="h-full bg-gold transition-[width] duration-500"
+            className="h-full bg-clue transition-[width] duration-500"
             style={{ width: active === 0 ? '0%' : `max(${activeShare}%, 10px)` }}
           />
         </div>
@@ -49,7 +49,7 @@ export default function ProgressBar({ completed, active, total }: ProgressBarPro
           {completed} gelöst
         </span>
         <span className="inline-flex items-center gap-1.5">
-          <span className="size-2 rounded-full bg-gold" />
+          <span className="size-2 rounded-full bg-clue" />
           {active} in Arbeit
         </span>
         <span className="inline-flex items-center gap-1.5">

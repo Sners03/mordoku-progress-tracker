@@ -17,7 +17,8 @@ function isPuzzle(value: unknown): value is Puzzle {
     typeof puzzle.status === 'string' &&
     STATUSES.has(puzzle.status as PuzzleStatus) &&
     typeof puzzle.date === 'string' &&
-    typeof puzzle.notes === 'string'
+    typeof puzzle.notes === 'string' &&
+    (puzzle.solvedAt === undefined || typeof puzzle.solvedAt === 'string')
   )
 }
 

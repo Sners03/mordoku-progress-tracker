@@ -1,6 +1,6 @@
 import { useEffect, useId, useState } from 'react'
 import { Trash2, X } from 'lucide-react'
-import { formatDay, nextStatus, STATUS_LABEL } from '../status.ts'
+import { formatClock, formatDay, nextStatus, STATUS_LABEL } from '../status.ts'
 import type { Puzzle } from '../types.ts'
 
 interface PuzzleSheetProps {
@@ -30,12 +30,12 @@ export default function PuzzleSheet({ puzzle, editing, onClose, onChange, onRemo
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="relative max-h-[88svh] w-full overflow-y-auto rounded-t-[1.75rem] border border-line bg-card px-4 pt-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-2xl sm:max-w-lg sm:rounded-[1.75rem] sm:p-6 dark:border-white/10 dark:bg-dusk"
+        className="glass relative max-h-[88svh] w-full overflow-y-auto rounded-t-[1.75rem] border border-white/70 px-4 pt-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:max-w-lg sm:rounded-[1.75rem] sm:p-6 dark:border-white/15"
       >
         <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-line sm:hidden dark:bg-white/15" />
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs tracking-[0.16em] text-gold uppercase">Mordoku</p>
+            <p className="text-xs tracking-[0.16em] text-rose uppercase">Mordoku</p>
             <h2 id={titleId} className="font-display text-4xl text-ink dark:text-paper">
               #{puzzle.id}
             </h2>
@@ -56,7 +56,7 @@ export default function PuzzleSheet({ puzzle, editing, onClose, onChange, onRemo
             <input
               value={puzzle.title}
               onChange={(event) => onChange({ title: event.target.value })}
-              className="mt-1 w-full rounded-2xl border border-line bg-paper px-3 py-2.5 text-base text-ink outline-none ring-gold/40 focus:ring-2 dark:border-white/10 dark:bg-night dark:text-paper"
+              className="mt-1 w-full rounded-2xl border border-line bg-paper px-3 py-2.5 text-base text-ink outline-none ring-rose/30 focus:ring-2 dark:border-white/10 dark:bg-night dark:text-paper"
             />
           </label>
         ) : (
@@ -67,7 +67,22 @@ export default function PuzzleSheet({ puzzle, editing, onClose, onChange, onRemo
           {editing ? (
             <button
               type="button"
-              onClick={() => onChange({ status: nextStatus(puzzle.status) })}
+              onClick={() => {
+                const status = nextStatus(puzzle.status)
+                if (status !== 'completed') {
+                  onChange({ status })
+                  return
+                }
+                const now = new Date()
+                const date =
+                  puzzle.date ||
+                  `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+                onChange({
+                  status,
+                  date,
+                  solvedAt: puzzle.solvedAt || now.toISOString(),
+                })
+              }}
               className="rounded-full bg-rose/15 px-4 py-2 text-sm font-medium text-rose"
             >
               {STATUS_LABEL[puzzle.status]} · tippen zum Wechseln
@@ -83,12 +98,41 @@ export default function PuzzleSheet({ puzzle, editing, onClose, onChange, onRemo
             <input
               type="date"
               value={puzzle.date}
-              onChange={(event) => onChange({ date: event.target.value })}
-              className="mt-1 w-full rounded-2xl border border-line bg-paper px-3 py-2.5 text-base text-ink outline-none ring-gold/40 focus:ring-2 dark:border-white/10 dark:bg-night dark:text-paper"
+              onChange={(event) => {
+                const date = event.target.value
+                const clock = puzzle.solvedAt ? formatClock(puzzle.solvedAt) : ''
+                onChange({
+                  date,
+                  solvedAt: date && clock ? `${date}T${clock}:00` : puzzle.solvedAt,
+                })
+              }}
+              className="mt-1 w-full rounded-2xl border border-line bg-paper px-3 py-2.5 text-base text-ink outline-none ring-rose/30 focus:ring-2 dark:border-white/10 dark:bg-night dark:text-paper"
             />
           </label>
         ) : (
-          <p className="mt-4 text-sm text-mist dark:text-paper/70">{formatDay(puzzle.date)}</p>
+          <p className="mt-4 text-sm text-mist dark:text-paper/70">
+            {formatDay(puzzle.date)}
+            {puzzle.solvedAt ? ` · ${formatClock(puzzle.solvedAt)}` : ''}
+          </p>
+        )}
+        {editing && puzzle.status === 'completed' && (
+          <label className="mt-4 block text-xs text-mist">
+            Uhrzeit
+            <input
+              type="time"
+              value={puzzle.solvedAt ? formatClock(puzzle.solvedAt) : ''}
+              onChange={(event) => {
+                const clock = event.target.value
+                if (!clock) return
+                const now = new Date()
+                const date =
+                  puzzle.date ||
+                  `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+                onChange({ date, solvedAt: `${date}T${clock}:00` })
+              }}
+              className="mt-1 w-full rounded-2xl border border-line bg-paper px-3 py-2.5 text-base text-ink outline-none ring-rose/30 focus:ring-2 dark:border-white/10 dark:bg-night dark:text-paper"
+            />
+          </label>
         )}
 
         {editing ? (
@@ -99,7 +143,7 @@ export default function PuzzleSheet({ puzzle, editing, onClose, onChange, onRemo
               rows={4}
               onChange={(event) => onChange({ notes: event.target.value })}
               placeholder="Woran hängt ihr gerade?"
-              className="mt-1 w-full resize-y rounded-2xl border border-line bg-paper px-3 py-2.5 text-base text-ink outline-none ring-gold/40 focus:ring-2 dark:border-white/10 dark:bg-night dark:text-paper"
+              className="mt-1 w-full resize-y rounded-2xl border border-line bg-paper px-3 py-2.5 text-base text-ink outline-none ring-rose/30 focus:ring-2 dark:border-white/10 dark:bg-night dark:text-paper"
             />
           </label>
         ) : (

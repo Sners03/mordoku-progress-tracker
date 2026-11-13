@@ -41,7 +41,7 @@ export default function AdminModal({ onClose, onSubmit }: AdminModalProps) {
         }}
       >
         <div className="mb-5 flex items-center gap-3">
-          <span className="flex size-11 items-center justify-center rounded-full border border-gold/50 bg-blood/10 text-blood">
+          <span className="flex size-11 items-center justify-center rounded-full border border-rose/40 bg-blood/10 text-blood">
             <KeyRound className="size-5" aria-hidden="true" />
           </span>
           <div>
@@ -65,7 +65,7 @@ export default function AdminModal({ onClose, onSubmit }: AdminModalProps) {
             value={token}
             onChange={(event) => setToken(event.target.value)}
             placeholder="github_pat_…"
-            className="min-w-0 flex-1 rounded-xl border border-line bg-paper px-3 py-2.5 text-sm outline-none ring-gold/40 placeholder:text-mist/70 focus:ring-2 dark:border-white/10 dark:bg-night"
+            className="min-w-0 flex-1 rounded-xl border border-line bg-paper px-3 py-2.5 text-sm outline-none ring-rose/30 placeholder:text-mist/70 focus:ring-2 dark:border-white/10 dark:bg-night"
           />
           <button
             type="button"
