@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T16:34:19.740Z",
+  "lastUpdated": "2026-11-14T16:45:12.305Z",
   "puzzles": [
     {
       "id": "1",
@@ -36,9 +36,10 @@
     {
       "id": "5",
       "title": "Mordoku #5",
-      "status": "in-progress",
-      "date": "",
-      "notes": ""
+      "status": "completed",
+      "date": "2026-11-14",
+      "notes": "",
+      "solvedAt": "2026-11-14T16:45:09.318Z"
     },
     {
       "id": "6",
