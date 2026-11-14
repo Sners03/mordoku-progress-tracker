@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T16:54:40.357Z",
+  "lastUpdated": "2026-11-14T17:39:39.754Z",
   "puzzles": [
     {
       "id": "1",
@@ -60,28 +60,31 @@
     {
       "id": "8",
       "title": "Mordoku #8",
-      "status": "in-progress",
-      "date": "",
-      "notes": ""
+      "status": "completed",
+      "date": "2026-11-14",
+      "notes": "",
+      "solvedAt": "2026-11-14T17:25:51.622Z"
     },
     {
       "id": "9",
       "title": "Mordoku #9",
-      "status": "open",
-      "date": "",
-      "notes": ""
+      "status": "completed",
+      "date": "2026-11-14",
+      "notes": "",
+      "solvedAt": "2026-11-14T17:26:13.468Z"
     },
     {
       "id": "10",
       "title": "Mordoku #10",
-      "status": "open",
-      "date": "",
-      "notes": ""
+      "status": "completed",
+      "date": "2026-11-14",
+      "notes": "",
+      "solvedAt": "2026-11-14T17:34:30.096Z"
     },
     {
       "id": "11",
       "title": "Mordoku #11",
-      "status": "open",
+      "status": "in-progress",
       "date": "",
       "notes": ""
     },
