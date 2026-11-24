@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-24T20:24:32.683Z",
+  "lastUpdated": "2026-11-24T20:30:52.907Z",
   "puzzles": [
     {
       "id": "1",
@@ -296,9 +296,10 @@
     {
       "id": "40",
       "title": "Mordoku #40",
-      "status": "in-progress",
-      "date": "",
-      "notes": ""
+      "status": "completed",
+      "date": "2026-11-24",
+      "notes": "Owei owei",
+      "solvedAt": "2026-11-24T20:30:31.933Z"
     },
     {
       "id": "41",
